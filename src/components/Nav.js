@@ -2,21 +2,21 @@ import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 
 const Nav = () => {
-    const [show, setshow] = useState(false);
+    const [show, setShow] = useState(false);
 
     useEffect(() => {
 
         window.addEventListener('scroll',()=> {
             if (window.scrollY>50){
-                setshow(true);
+                setShow(true);
             }else{
-                setshow(false);
+                setShow(false);
             }
         })
       return () => {
         window.removeEventListener('scroll',()=>{});
       }
-    }, []);
+    }, [])
     
     
   return (
@@ -44,12 +44,12 @@ const NavWrapper = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 36px;
+    padding: 0 36px;  
     letter-spacing: 16px;
     z-index: 3;
 `;
 
-const Logo =styled.a`
+const Logo = styled.a`
     padding: 0;
     width: 80px;
     margin-top:  4px;
